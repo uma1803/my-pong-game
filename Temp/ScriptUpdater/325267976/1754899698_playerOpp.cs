@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
-public class PlayerMovement : MonoBehaviour
+public class playerOpp : MonoBehaviour
 {
     [SerializeField] private float movementSpeed;
     [SerializeField] private bool isAI;
@@ -33,11 +32,11 @@ public class PlayerMovement : MonoBehaviour
     {
         playerMove = new Vector2(0, 0); // Reset movement
 
-        if (Input.GetKey(KeyCode.W)) // Move up
+        if (Input.GetKey(KeyCode.UpArrow)) // Move up
         {
             playerMove.y = 1;
         }
-        else if (Input.GetKey(KeyCode.S)) // Move down
+        else if (Input.GetKey(KeyCode.DownArrow)) // Move down
         {
             playerMove.y = -1;
         }
@@ -61,6 +60,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        rb.linearVelocity = playerMove * movementSpeed; // Use velocity instead of linearVelocity
+        rb.linearVelocity = playerMove * movementSpeed; // Use velocity for smooth movement
     }
 }

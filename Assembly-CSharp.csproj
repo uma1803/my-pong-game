@@ -65,8 +65,11 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.0.16f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/playerOpp.cs" />
     <Compile Include="Assets/BallMovement.cs" />
+    <Compile Include="Assets/manager.cs" />
     <Compile Include="Assets/PlayerMovement.cs" />
+    <Compile Include="Assets/AudioManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets/8Bit Music - 062022/Notes.txt" />
